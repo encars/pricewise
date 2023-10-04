@@ -56,3 +56,15 @@ export async function getProductById(productId: string) {
         throw new Error(`Failed to get product: ${error}`)
     }
 }
+
+export async function getAllProducts() {
+    try {
+        connectToDB();
+
+        const products = await Product.find();
+
+        return products;
+    } catch (error) {
+        throw new Error(`Failed to get products: ${error}`)
+    }
+}
