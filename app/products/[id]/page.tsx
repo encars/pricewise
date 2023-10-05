@@ -1,3 +1,4 @@
+import Modal from "@/components/Modal";
 import PriceInfoCard from "@/components/PriceInfoCard";
 import ProductCard from "@/components/ProductCard";
 import { getProductById, getSimilarProducts } from "@/lib/actions";
@@ -89,7 +90,7 @@ const ProductDetails = async ({ params: { id } }: ProductDetailsProps) => {
                             <PriceInfoCard title="Lowest Price" iconSrc="/assets/icons/arrow-down.svg" value={`${product.currency} ${formatNumber(product.lowestPrice)}`} borderColor="#BEFFC5" />
                         </div>
                     </div>
-                    Modal
+                    <Modal />
                 </div>
             </div>
             <div className="flex flex-col gap-16">
